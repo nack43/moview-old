@@ -8,6 +8,10 @@ moview is a web based private movie review app
 - Azure
 - React
 
+## Tools
+### UI design
+[Figma](https://www.figma.com/)
+
 ## Features
 - [ ] Sign up
 - [ ] Login
