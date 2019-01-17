@@ -1,15 +1,28 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #E5E5E5;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
-#header {
+#header-contents {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: #71C684;
   height: 100px; }
-  #header .title {
+  #header-contents .title {
+    margin-right: auto;
     padding-top: 27px;
-    padding-left: 27px; }
-    #header .title a {
-      font-size: 35px;
-      color: white;
+    padding-left: 27px;
+    font-size: 35px;
+    color: white; }
+    #header-contents .title a {
+      text-decoration: none; }
+  #header-contents nav {
+    padding-top: 37px;
+    padding-right: 30px;
+    font-size: 20px;
+    color: white; }
+    #header-contents nav a {
       text-decoration: none; }

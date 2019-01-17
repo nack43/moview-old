@@ -3,9 +3,14 @@ const React = require('react');
 class Header extends React.Component {
   render() {
     return (
-      <header id="header">
-        <div className="title">
-          <a href="#">MOVIEW</a>
+      <header>
+        <div id="header-contents">
+          <div className="title">
+            <a href="#">MOVIEW</a>
+          </div>
+          <nav>
+            <a href="#">LOGOUT</a>
+          </nav>
         </div>
       </header>
     )
