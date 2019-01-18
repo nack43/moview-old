@@ -26,3 +26,44 @@ body {
     color: white; }
     #header-contents nav a {
       text-decoration: none; }
+
+#contents {
+  width: 70%;
+  height: 100%;
+  margin: auto; }
+
+#login-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px; }
+  #login-form .username {
+    width: 380px;
+    background-color: #E5E5E5;
+    height: 50px;
+    margin-bottom: 50px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    font-size: 150%; }
+  #login-form .username::-webkit-input-placeholder {
+    font-size: 20px; }
+  #login-form .password {
+    width: 380px;
+    background-color: #E5E5E5;
+    height: 50px;
+    margin-bottom: 50px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    font-size: 150%; }
+  #login-form .password::-webkit-input-placeholder {
+    font-size: 20px; }
+  #login-form .login-button {
+    background: #71C684;
+    color: white;
+    font-size: 25px;
+    width: 380px;
+    height: 60px;
+    letter-spacing: 7px; }
