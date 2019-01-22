@@ -31,6 +31,19 @@ body {
   width: 70%;
   height: 100%;
   margin: auto; }
+  #contents .page-title {
+    margin-bottom: 0;
+    margin-top: 45px; }
+  #contents .add-button {
+    display: block;
+    margin-left: auto;
+    text-decoration: none;
+    background: #71C684;
+    font-size: 40px;
+    color: #FFF;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; }
 
 #login-form {
   display: flex;
@@ -67,3 +80,53 @@ body {
     width: 380px;
     height: 60px;
     letter-spacing: 7px; }
+
+.sorts {
+  width: 40%;
+  margin-left: auto; }
+  .sorts span a {
+    font-size: 25px;
+    margin-right: 10px; }
+
+.reviews ul {
+  list-style: none;
+  width: 80%; }
+
+.reviews .review {
+  display: flex;
+  margin-bottom: 20px;
+  width: 140%; }
+  .reviews .review .buttons {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px; }
+    .reviews .review .buttons button {
+      background: #71C684;
+      font-size: 14px;
+      color: white;
+      height: 50px;
+      width: 100px;
+      margin-left: 5px; }
+  .reviews .review .contents {
+    width: 75%;
+    display: flex;
+    background: white; }
+    .reviews .review .contents img {
+      padding: 5px;
+      height: 120px;
+      width: 95px; }
+    .reviews .review .contents .right-content {
+      position: relative;
+      width: 85%; }
+      .reviews .review .contents .right-content .title {
+        padding-left: 15px;
+        padding-top: 10px;
+        font-size: 16px; }
+      .reviews .review .contents .right-content .sub-contents {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        width: 53%;
+        margin-left: auto; }
+        .reviews .review .contents .right-content .sub-contents .watched-at {
+          padding-right: 40px; }

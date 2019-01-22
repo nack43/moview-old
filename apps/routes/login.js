@@ -3,8 +3,13 @@ const router = express.Router();
 const passport = require('passport');
 
 router.post('/',
-  passport.authenticate('local', { failureRedirect: '/' }),
+  passport.authenticate('local',
+  {
+    failureRedirect: '/',
+    failureFlash: 'Invalid username or password',
+  }),
   (req, res) => {
+    console.log(req.session)
     res.send(req.user);
 });
 

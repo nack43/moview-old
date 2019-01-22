@@ -13,6 +13,7 @@ require('./services/passport');
 // routes
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
+const reviewsRouter = require('./routes/reviews');
 
 mongoose.connect(process.env.DB_URI);
 
@@ -54,5 +55,6 @@ app.use(passport.session());
 // routes
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/reviews', reviewsRouter);
 
 module.exports = app;
