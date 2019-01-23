@@ -3,21 +3,22 @@ moview is a web based private movie review app
 
 ## Technologies
 - Node (JS)
-- Express
 - MongoDB
 - Azure
-- React (SSR)
+
+## Libraries
+- [Express](https://expressjs.com/)... Web Framework
+- [React](https://reactjs.org/)... Server Side Rendering
+- [Mongoose](https://mongoosejs.com/)... ODM
+- [Passport](http://www.passportjs.org/)... User Auth
 
 ## Tools
-### DB
-[mLab](https://mlab.com/login/)
-
-### UI design
-[Figma](https://www.figma.com/)
+- [mLab](https://mlab.com/login/)... DB
+- [Figma](https://www.figma.com/)... UI Design
 
 ## Features
-- [ ] Login
-- [ ] Logout
+- [x] Login
+- [x] Logout
 - [ ] Register Review
 - [ ] List Reviews
 - [ ] Show Review
