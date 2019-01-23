@@ -6,10 +6,10 @@ class Header extends React.Component {
       <header>
         <div id="header-contents">
           <div className="title">
-            <a href="#">MOVIEW</a>
+            <a href="/reviews">MOVIEW</a>
           </div>
           <nav>
-            <a href="#">LOGOUT</a>
+            <a href="/logout">LOGOUT</a>
           </nav>
         </div>
       </header>

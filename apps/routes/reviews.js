@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const requireLogin = require('../middleware/requireLogin');
 
-// to check the login process
-router.get('/', (req, res) => {
+router.get('/', requireLogin, (req, res) => {
 
   res.render('reviews', { title: 'REVIEWS' });
 });
