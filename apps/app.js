@@ -8,6 +8,7 @@ const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 require('./models/User');
+require('./models/Review');
 require('./services/passport');
 
 // routes
@@ -16,21 +17,6 @@ const loginRouter = require('./routes/login');
 const reviewsRouter = require('./routes/reviews');
 
 mongoose.connect(process.env.DB_URI);
-
-// Make user manually
-// const User = mongoose.model('users');
-// const createInitialUser = async () => {
-//   const salt = await bcrypt.genSalt(10);
-//   const hash = await bcrypt.hash(process.env.PASSWORD, salt);
-//   const user = await User.findOne({ email: process.env.EMAIL });
-//   if (user) {
-//     // console.log(user);
-//     return
-//   }
-
-//   new User({email: process.env.EMAIL, password: hash}).save();
-// }
-// createInitialUser();
 
 const app = express();
 
