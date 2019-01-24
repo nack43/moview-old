@@ -9,8 +9,7 @@ router.post('/',
     failureFlash: 'Invalid username or password',
   }),
   (req, res) => {
-    console.log(req.session)
-    res.send(req.user);
+    res.redirect('/reviews');
 });
 
 // to check the login process
