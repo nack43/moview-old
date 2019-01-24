@@ -1,8 +1,10 @@
 const React = require('react');
 const DefaultLayout = require('./layouts/default');
+const moment = require('moment');
 
 class Reviews extends React.Component {
   render() {
+    const reviews = this.props.reviews;
     return (
       <html>
         <body>
@@ -16,49 +18,42 @@ class Reviews extends React.Component {
             </div>
             <div className="reviews">
               <ul>
-                <li className="review">
-                  <div className="contents">
-                    <img src="/images/sample_img1.jpg" alt="sample1"/>
-                    <div className="right-content">
-                      <div className="title">
-                        <h2>Noah</h2>
-                      </div>
-                      <div className="sub-contents">
-                        <span className="watched-at">WATCHED AT: YYYY/MM/DD</span>
-                        <span>YOUR RATE x.x</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="buttons">
-                    <button>VIEW</button>
-                    <button>EDIT</button>
-                  </div>
-                </li>
-
-                <li className="review">
-                  <div className="contents">
-                    <img src="/images/sample_img2.jpg" alt="sample1"/>
-                    <div className="right-content">
-                      <div className="title">
-                        <h2>Bohemian Rhapsody</h2>
-                      </div>
-                      <div className="sub-contents">
-                        <span className="watched-at">WATCHED AT: YYYY/MM/DD</span>
-                        <span>YOUR RATE x.x</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="buttons">
-                    <button>VIEW</button>
-                    <button>EDIT</button>
-                  </div>
-                </li>
-
+                {
+                  reviews.map(review => {
+                    return <Review review={ review } />
+                  })
+                }
               </ul>
             </div>
           </div>
         </body>
       </html>
+    )
+  }
+}
+
+class Review extends React.Component {
+  render() {
+    const review = this.props.review;
+    return (
+      <li className="review">
+        <div className="contents">
+          <img src={ review.imgUrl } alt="sample1"/>
+          <div className="right-content">
+            <div className="title">
+              <h2>{ review.title }</h2>
+            </div>
+            <div className="sub-contents">
+              <span className="watched-at">WATCHED AT : { moment(review.watchedAt).format('YYYY/MM/DD') }</span>
+              <span>YOUR RATE : { review.rate }</span>
+            </div>
+          </div>
+        </div>
+        <div className="buttons">
+          <button>VIEW</button>
+          <button>EDIT</button>
+        </div>
+      </li>
     )
   }
 }
