@@ -9,6 +9,7 @@ router.post('/',
     failureFlash: 'Invalid username or password',
   }),
   (req, res) => {
+    console.log('login successfully')
     res.redirect('/reviews');
 });
 

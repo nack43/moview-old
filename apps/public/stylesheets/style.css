@@ -43,7 +43,9 @@ body {
     color: #FFF;
     width: 90px;
     height: 90px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    text-align: center;
+    line-height: 83px; }
 
 #login-form {
   display: flex;
@@ -130,3 +132,63 @@ body {
         margin-left: auto; }
         .reviews .review .contents .right-content .sub-contents .watched-at {
           padding-right: 40px; }
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 30px;
+  margin-left: 40px;
+  margin-top: 100px; }
+  .search-form form {
+    height: 100%;
+    width: 50%; }
+    .search-form form input {
+      height: 100%;
+      width: 100%;
+      vertical-align: middle;
+      font-size: 150%; }
+  .search-form img {
+    height: 80%;
+    width: 30px;
+    padding-top: 5px;
+    padding-right: 5px; }
+
+.movies {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  margin-top: 30px;
+  padding-left: 22%; }
+  .movies ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  .movies .movie {
+    margin-bottom: 10px;
+    width: 230%;
+    background: white;
+    margin-right: auto;
+    margin-left: auto; }
+    .movies .movie a {
+      text-decoration: none;
+      color: inherit; }
+      .movies .movie a .contents {
+        display: flex; }
+        .movies .movie a .contents img {
+          padding: 5px;
+          height: 120px;
+          width: 95px; }
+        .movies .movie a .contents .right-content {
+          position: relative;
+          width: 85%; }
+          .movies .movie a .contents .right-content .title {
+            padding-top: 20px;
+            padding-left: 10px; }
+          .movies .movie a .contents .right-content .sub-content {
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            width: 200px;
+            margin-left: auto; }

@@ -15,8 +15,9 @@ require('./services/passport');
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
 const reviewsRouter = require('./routes/reviews');
+const registerRouter = require('./routes/register');
 
-mongoose.connect(process.env.DB_URI);
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true });
 
 const app = express();
 
@@ -42,5 +43,6 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/reviews', reviewsRouter);
+app.use('/register', registerRouter);
 
 module.exports = app;

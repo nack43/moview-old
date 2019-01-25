@@ -11,7 +11,7 @@ class Reviews extends React.Component {
           <DefaultLayout />
           <div id="contents">
             <h1 className="page-title">REVIEWS</h1>
-            <button className="add-button">+</button>
+            <a className="add-button" href="/register/search">+</a>
             <div className="sorts">
               <span>WATCHED AT: <a href="#">↑</a><a href="#">↓</a></span>
               <span>RATE: <a href="#">↑</a><a href="#">↓</a></span>
