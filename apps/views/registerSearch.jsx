@@ -40,7 +40,7 @@ class Movie extends React.Component {
     const { movie } = this.props;
     return (
       <li className="movie">
-        <a href="#">
+        <a href={`/register/${movie.imdbID}`}>
           <div className="contents">
             <img src={ movie.Poster } alt="poster"/>
             <div className="right-content">

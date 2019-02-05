@@ -24,4 +24,26 @@ router.get('/search', requireLogin, async(req, res) => {
   });
 });
 
+router.get('/:imdbId', requireLogin, async(req, res) => {
+  if (!req.params.imdbId) {
+    throw new Error('invalid request');
+  }
+  // get movie data by id
+  const movie = await axios.get(
+    process.env.OMDB_API_BASE_URL,
+    {
+      params: {
+        i: req.params.imdbId,
+        apikey: process.env.OMDB_API_KEY,
+      }
+    }
+  )
+
+  if (!movie) {
+    throw new Error('movie does not find');
+  }
+  // TODO: next step make registerDetail view
+  res.render('registerDetail', { movie });
+})
+
 module.exports = router;
