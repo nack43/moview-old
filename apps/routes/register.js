@@ -42,8 +42,16 @@ router.get('/:imdbId', requireLogin, async(req, res) => {
   if (!movie) {
     throw new Error('movie does not find');
   }
-  // TODO: next step make registerDetail view
-  res.render('registerDetail', { movie });
+  
+  res.render('registerDetails', {
+    pageTitle: 'REGISTER-DETAILS',
+    title: movie.data.Title,
+    releasedYear: movie.data.Year,
+    runtime: movie.data.Runtime,
+    director: movie.data.Director,
+    ratings: movie.data.Ratings,
+    actors: movie.data.Actors.split(','),
+  });
 })
 
 module.exports = router;
