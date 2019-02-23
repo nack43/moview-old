@@ -35,6 +35,8 @@ class Reviews extends React.Component {
 class Review extends React.Component {
   render() {
     const review = this.props.review;
+    console.log(this.props.review.rate)
+    console.log(this.props.review)
     return (
       <li className="review">
         <div className="contents">

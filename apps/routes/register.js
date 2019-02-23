@@ -50,6 +50,7 @@ router.get('/:imdbId', requireLogin, async(req, res) => {
     runtime: movie.data.Runtime,
     director: movie.data.Director,
     ratings: movie.data.Ratings,
+    imgUrl: movie.data.Poster,
     actors: movie.data.Actors.split(','),
   });
 })

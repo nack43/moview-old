@@ -1,12 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const MongoStore = require('connect-mongo')(session);
+const  bodyParser = require('body-parser');
 require('./models/User');
 require('./models/Review');
 require('./services/passport');
@@ -27,11 +28,12 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(session({
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
   secret: process.env.SESSION_SECRET_KEY,
   saveUninitialized: true,
   resave: true,

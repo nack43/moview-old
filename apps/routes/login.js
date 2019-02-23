@@ -11,14 +11,17 @@ router.post('/',
   (req, res) => {
     console.log('login successfully')
     res.redirect('/reviews');
+    return;
 });
 
 // to check the login process
 router.get('/session', (req, res) => {
   if (req.user) {
     res.json(req.user)
+    return;
   } else {
-    res.send('unauthenticated user')
+    res.send('unauthenticated user');
+    return;
   }
 });
 

@@ -241,3 +241,57 @@ body {
     }
   }
 }
+
+.inputs {
+  padding-left: 35px;
+  padding-top: 20px;
+
+  input[type=text], input[type=date]{
+    height: 30px;
+    width: 50%;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .actors {
+    list-style: none;
+
+    .actor {
+      margin-bottom: 15px;
+
+      .actual {
+        margin-right: 35px;
+      }
+    }
+  }
+  textarea {
+    height: 50px;
+    width: 90%;
+  }
+  .input-content {
+    margin-left: 30px;
+    p {
+      font-size: 17px;
+    }
+  }
+  .scenes {
+    textarea {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+  }
+  .complete-button {
+    display: flex;
+    justify-content: center;
+
+    input {
+      background: #71C684;
+      color: white;
+      height: 50px;
+      width: 80%;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+  }
+}

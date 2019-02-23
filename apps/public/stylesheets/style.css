@@ -192,3 +192,39 @@ body {
             bottom: 20px;
             width: 200px;
             margin-left: auto; }
+
+.inputs {
+  padding-left: 35px;
+  padding-top: 20px; }
+  .inputs input[type=text], .inputs input[type=date] {
+    height: 30px;
+    width: 50%;
+    font-size: 15px;
+    padding-left: 10px; }
+  .inputs .actors {
+    list-style: none; }
+    .inputs .actors .actor {
+      margin-bottom: 15px; }
+      .inputs .actors .actor .actual {
+        margin-right: 35px; }
+  .inputs textarea {
+    height: 50px;
+    width: 90%; }
+  .inputs .input-content {
+    margin-left: 30px; }
+    .inputs .input-content p {
+      font-size: 17px; }
+  .inputs .scenes textarea {
+    margin-top: 20px;
+    margin-bottom: 15px; }
+  .inputs .complete-button {
+    display: flex;
+    justify-content: center; }
+    .inputs .complete-button input {
+      background: #71C684;
+      color: white;
+      height: 50px;
+      width: 80%;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 50px; }
