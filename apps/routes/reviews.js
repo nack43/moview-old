@@ -8,12 +8,22 @@ router.get('/', requireLogin, async(req, res) => {
   const reviews = await Review.find({
     _user: req.user.id,
   });
-  
+
   res.render('reviews', {
     pageTitle: 'REVIEWS',
     reviews,
   });
 });
+
+router.delete('/:id', requireLogin, async(req, res) => {
+  try {
+    await Review.find({ _id: req.params.id }).remove();
+  } catch (e) {
+    console.log(e)
+  }
+  res.redirect('/');
+  return;
+})
 
 router.post('/', requireLogin, async(req, res) => {
   const review = new Review({

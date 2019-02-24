@@ -7,7 +7,9 @@ class DefaultLayout extends React.Component {
       <html lang="en">
       <head>
         <title>MOVIEW</title>
-        <link rel="stylesheet" href="/stylesheets/style.css" />   
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/javascripts/main.js"></script>
       </head>
 
       <body>
