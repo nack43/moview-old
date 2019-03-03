@@ -51,7 +51,7 @@ class Review extends React.Component {
           </div>
         </div>
         <div className="buttons">
-          <button>VIEW</button>
+          <a href={`/reviews/${ review.id }`}><button>VIEW</button></a>
           <button>EDIT</button>
           <button className="delete-button" data-review-id={ review.id }>DELETE</button>
         </div>

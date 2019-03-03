@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const actorSchema = new Schema({
+  charactor: String,
+  actor: String,
+})
 
 const reviewSchema = new Schema({
   title: String,
   watchedAt: Date,
   prot: String,
-  actors: Array,
+  actors: [actorSchema],
   imgUrl: String,
   scene1: String,
   scene2: String,

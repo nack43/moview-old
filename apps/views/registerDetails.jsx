@@ -64,7 +64,8 @@ class RegisterDetails extends React.Component {
                         return (
                           <li class="actor">
                             <label class="actual">{actor}</label>
-                            <input name="actors" type="text"/>
+                            <input name="charactors" type="text"/>
+                            <input type="hidden" name="actors" value={actor}/>
                           </li>
                         )
                       })
@@ -77,15 +78,15 @@ class RegisterDetails extends React.Component {
                   <div className="scenes input-content">
                     <div> 
                       <label htmlFor="scene-1">scene1</label>
-                      <textarea name="scene-1" id="scene-1" className="input-content"/>
+                      <textarea name="scene_1" id="scene-1" className="input-content"/>
                     </div>
                     <div>
                       <label htmlFor="scene-2">scene2</label>
-                      <textarea name="scene-2" id="scene-2" className="input-content"/>
+                      <textarea name="scene_2" id="scene-2" className="input-content"/>
                     </div>
                     <div>
                       <label htmlFor="scene-3">scene3</label>
-                      <textarea name="scene-3" id="scene-3" className="input-content"/>
+                      <textarea name="scene_3" id="scene-3" className="input-content"/>
                     </div>
                   </div>
                 </div>

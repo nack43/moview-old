@@ -228,3 +228,12 @@ body {
       font-size: 20px;
       margin-top: 30px;
       margin-bottom: 50px; }
+
+.review-details {
+  padding-left: 70px;
+  padding-top: 30px; }
+  .review-details h2 {
+    margin-left: 5px; }
+  .review-details p {
+    margin-left: 50px;
+    font-size: 21px; }

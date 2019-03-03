@@ -15,6 +15,16 @@ router.get('/', requireLogin, async(req, res) => {
   });
 });
 
+router.get('/:id', async(req, res) => {
+  try {
+    const review = await Review.findById(req.params.id);
+    res.render('reviewDetails', { review });
+    return;
+  } catch (e) {
+    console.log(e);
+  }
+})
+
 router.delete('/:id', requireLogin, async(req, res) => {
   try {
     await Review.find({ _id: req.params.id }).remove();
@@ -26,12 +36,13 @@ router.delete('/:id', requireLogin, async(req, res) => {
 })
 
 router.post('/', requireLogin, async(req, res) => {
+
+  // make actor schema object
   const review = new Review({
     title: req.body.title,
     rate: req.body.rate,
     watchedAt: req.body.watchedAt,
     prot: req.body.prot,
-    actors: req.body.actors,
     imgUrl: req.body.imgUrl,
     scene1: req.body.scene_1,
     scene2: req.body.scene_2,
@@ -43,6 +54,10 @@ router.post('/', requireLogin, async(req, res) => {
     _user: req.user.id,
   })
 
+  for (let i = 0; i < req.body.actors.length; i++) { 
+    review.actors.push({ charactor: req.body.charactors[i], actor: req.body.actors[i] });
+  }
+  
   try {
     await review.save();
   } catch (e) {
@@ -50,6 +65,6 @@ router.post('/', requireLogin, async(req, res) => {
   }
 
   res.redirect('/reviews');
-})
+});
 
 module.exports = router;
